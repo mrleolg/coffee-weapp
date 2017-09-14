@@ -1,0 +1,99 @@
+/* uc.wxss */
+.headbg{
+  position: relative;
+  color: #fff;
+}
+.headbg .container{
+  padding:60rpx 0;
+}
+.headbg image.head-bg{
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  display: block;
+  vertical-align:middle;
+}
+.headpor{
+  width: 160rpx;
+  height: 160rpx;
+  overflow: hidden;
+  border-radius: 100%;
+  border: 4rpx solid #c0a895;
+}
+.headpor image{
+  display: block;
+  vertical-align:middle;
+}
+.myname{
+  font-size: 36rpx;
+  font-weight: bold;
+  margin: 20rpx 0;
+}
+/*我的订单*/
+.myorder{
+  border-top: none;
+  margin-bottom: 20rpx;
+}
+.myorder .panel-title navigator{
+  overflow: hidden;
+  line-height:40rpx;
+  color: #a18771;
+}
+.myorder .panel-title-txt{
+  color: #626262;
+}
+.myorder .panel-title .icon-xiayiye {
+  margin-left: 10rpx;
+}
+.myorder-items{
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: flex-start;
+}
+.myorder-items > navigator{
+  font-size: 28rpx;
+  text-align: center;
+  padding: 0 20rpx;
+  color: #626262;
+}
+.myorder-items span.iconfont{
+  font-size: 52rpx;
+  font-weight: normal;
+  display: block;
+  margin-bottom: 10rpx;
+}
+
+/*优惠券*/
+.mycoupon{
+  margin-bottom: 20rpx;
+}
+.mycoupon .panel-title{
+  margin-bottom:0;
+}
+.mycoupon .panel-title-txt{
+  color: #626262
+}
+.mycoupon-num{
+  width:36rpx;
+  height:36rpx;
+  line-height: 36rpx;
+  border-radius: 100%;
+  background-color: #c0a895;
+  color: #fff;
+  font-size: 28rpx;
+  text-align: center;
+}
+
+/*联系客服*/
+.contect{
+  margin-bottom: 20rpx;
+}
+.contect .panel-title{
+  margin-bottom:0;
+}
+.contect .panel-title-txt{
+  color: #626262
+}

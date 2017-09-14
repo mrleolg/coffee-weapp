@@ -1,0 +1,112 @@
+<!--menu.wxml-->
+<!--头图-->
+<view class="top-img">
+  <image src="../../images/menu-top-jpg.jpg" mode="widthFix"></image>
+</view>
+<!--文字跑马灯-->
+<view class="tips">
+  <text class="tips-btn">活动</text>
+  <text class="tips-txt">{{tipsTxt}}</text>
+</view>
+<!--菜单-->
+<view class="menu">
+  <!--左菜单-->
+  <scroll-view scroll-y="true" scroll-with-animation="true" class="menu-left">
+    <block wx:for="{{menuList}}" wx:key="id">
+    <view class="cate {{curNav == item.id ? 'active' : ''}}" bindtap="switchRightTab" data-index="{{index}}" data-id="{{item.id}}">{{item.treeName}}</view>
+   </block>
+  </scroll-view>
+  <!--右菜单-->
+  <scroll-view scroll-y="true" scroll-with-animation="true" class="menu-right">
+    <block wx:for="{{menuList[curIndex].tree}}" wx:key="id">
+    <view class="menu-list">
+      <view class="menu-list-img"><image src="{{item.image}}" mode="widthFix"></image></view>
+      <view class="menu-list-desc">
+        <text>{{item.name}}</text>
+        <view>{{item.description}}</view>
+        <view class="price">
+          <view class="price-num"><text>￥{{item.price}}</text>起</view>
+          <view class="menu-list-spec">
+            <block wx:if="{{item.spec == ''}}">
+              <span class="iconfont icon-plus"></span>
+            </block>
+            <block wx:else>
+              <span class="selectSpec">选规格</span>
+            </block>
+          </view>
+        </view>
+      </view>
+    </view>
+    </block>
+  </scroll-view>
+</view>
+<!--购物车-->
+<view class="shopping-cart {{goodsList ? 'active' : ''}}">
+
+  <!--购物车商品列表-->
+  <view class="goods">
+    <view class="goods-total">
+      <span class="iconfont icon-gouwuchekong"></span>
+      <text>5</text>
+    </view>
+    <view class="goods-ctrl">
+    <view class="goods-clear">
+      <span class="iconfont icon-del"></span>清空购物车
+      <span class="arrow"></span>
+    </view>
+    <view class="goods-list">
+      <view class="goods-name ellipsis">
+        美式咖啡-浅尝咖啡那扑鼻而来的浓香浅尝咖啡那扑鼻而来的浓香
+      </view>
+      <view class="goods-price">￥20</view>
+      <view class="goods-num">
+        <view class="reduce"><button>-</button></view>
+        <view class=""><input type="number" name="" value="1" /></view>
+        <view class="plus"><button>+</button></view>
+      </view>
+    </view>
+    <view class="goods-list">
+      <view class="goods-name ellipsis">
+        美式咖啡-浅尝咖啡那扑鼻而来的浓香浅尝咖啡那扑鼻而来的浓香
+        <text>+中杯+热</text>
+      </view>
+      <view class="goods-price">￥20</view>
+      <view class="goods-num">
+        <view class="reduce"><button>-</button></view>
+        <view class=""><input type="number" name="" value="1" /></view>
+        <view class="plus"><button>+</button></view>
+      </view>
+    </view>
+    <view class="goods-list">
+      <view class="goods-name ellipsis">
+        美式咖啡-浅尝咖啡那扑鼻而来的浓香浅尝咖啡那扑鼻而来的浓香
+        <text>+中杯+热</text>
+      </view>
+      <view class="goods-price">￥20</view>
+      <view class="goods-num">
+        <view class="reduce"><button>-</button></view>
+        <view class=""><input type="number" name="" value="1" /></view>
+        <view class="plus"><button>+</button></view>
+      </view>
+    </view>
+    </view>
+    <!--<span class="shadow"></span>-->
+  </view>
+  
+  <!-- 结账按钮 -->
+  <view class="price-checkout">
+    <view class="shopping-total-price">
+      <text class="total-price">￥120</text>
+      <span class="shadow"></span>
+    </view>
+    <view class="checkout">去买单</view>
+  </view>
+
+</view>
+<!--阴影层-->
+<block wx:if="{{goodsList}}">
+  <span class="shadow goods-bg"></span>
+</block>
+
+<!--技术支持图标-->
+<view class="copyright"><image src="../../images/copyright.png" mode="widthFix"></image></view>

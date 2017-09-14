@@ -1,0 +1,107 @@
+<scroll-view scroll-y="true" enable-back-to-top="true" scroll-with-animation="true">
+
+<!-- 焦点图 -->
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoPlay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgsUrl}}" wx:key="imgsId">
+    <swiper-item>
+      <image src="{{item.imgUrl}}" mode="widthFix"></image>
+    </swiper-item>
+  </block>
+</swiper>
+<!-- 领取会员卡 -->
+<view class="membercard section">
+  <image class="membercard-bg" src="img/membercard-bg.jpg" mode="widthFix"></image>
+  <view class="card-name">vip会员</view>
+  <view class="card">
+    <view>
+      <text class="card-text">{{memberCardDescription}}</text>
+    </view>
+    <view class="getcard">
+      <button class="getcard-btn" bindtouchend="getMemberCard">{{getMemberCard}}</button>
+    </view>
+  </view>
+</view>
+<!-- 领取优惠券 -->
+<view class="scrollview section">
+  <scroll-view class="scroll-x" scroll-x="true" scroll-with-animation="true">
+    <block wx:for="{{couponList}}" wx:key="id">
+      <view class="scroll-view" data-index="{{index}}" data-id="{{item.id}}">
+        <view class="coupon-cont">
+          <view class="coupon-price">
+            <text class="coupon-price-symbol">￥</text>
+            <text class="coupon-price-value">{{item.couponValue}}</text>
+          </view>
+          <view class="coupon-text">
+            <text class="coupon-name">{{item.couponName}}</text>
+            <text class="coupon-desc">{{item.couponCondition}}</text>
+          </view>
+        </view>
+        <image class="coupon-img" src="img/coupon-bg.jpg" mode="widthFix"></image>
+        <view class="coupon-date">
+          <text class="coupon-date-txt">有效期至{{item.expDate}}</text>
+          <block wx:if="{{item.state}}">
+            <button class="coupon-date-btn" bindtap="getCoupon" data-index="{{index}}" data-id="{{item.id}}">领取</button>
+          </block>
+          <block wx:else>
+            <button class="coupon-date-btn" data-index="{{index}}" data-id="{{item.id}}">已领取</button>
+          </block>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+</view>
+<!-- 广告图 -->
+<navigator url="../menu/menu" open-type="switchTab" class="adv section"><image src="{{advImgUrl}}" mode="widthFix"></image></navigator>
+<!-- 店长推荐 -->
+<view class="recpro panel">
+  <navigator url="../menu/menu" open-type="switchTab" class="panel-title">
+    <text class="panel-title-txt">店长推荐</text>
+    <span class="panel-title-icon iconfont icon-xiayiye"></span>
+  </navigator>
+  <scroll-view class="reclist" scroll-x="true">
+    <block wx:for="{{recListAarry}}" wx:key="id">
+      <view class="prolist">
+        <image src="{{item.proImg}}" mode="widthFix"></image>
+        <text class="prolist-txt">{{item.proName}}</text>
+      </view>
+    </block>
+  </scroll-view>
+</view>
+<!-- 店长推荐 -->
+<view class="brand panel">
+  <navigator url="../menu/menu" open-type="switchTab" class="panel-title">
+    <text class="panel-title-txt">品牌故事</text>
+    <span class="panel-title-icon iconfont icon-xiayiye"></span>
+  </navigator>
+  <view class="brand-video">
+    <video class="brandvideo" src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400" controls loop="true" poster="../../images/video.jpg" binderror="videoErrorCallback"></video>
+  </view>
+  <text class="brand-profile">威鲸人文咖啡，传递的就是人文精神，由道地的资深台湾咖啡人创办，主推手冲咖啡、意式咖啡及美食，想要享受慢节奏生活的你，千万不要错过来这里！三文鱼美味做法,不是生...</text>
+  <view class="brand-usp">
+    <view class="brand-usp-item">
+      <span class="iconfont icon-wifibicon"></span>
+      <text class="icon-title">WIFI</text>
+    </view>
+    <view class="brand-usp-item">
+      <span class="iconfont icon-tingchewei"></span>
+      <text class="icon-title">停车位</text>
+    </view>
+    <view class="brand-usp-item">
+      <span class="iconfont icon-wuyanfang"></span>
+      <text class="icon-title">无烟区</text>
+    </view>
+    <view class="brand-usp-item">
+      <span class="iconfont icon-baoxiang"></span>
+      <text class="icon-title">包厢</text>
+    </view>
+  </view>
+  <view class="wifi">
+    <text>WIFI帐号：{{wifiName}} \n WIFI密码：{{wifiPwd}} </text>
+    <button class="onekeycopy" bindtap="onekeyCopy">复制密码</button>
+  </view>
+</view>
+
+<!--技术支持图标-->
+<view class="copyright"><image src="../../images/copyright.png" mode="widthFix"></image></view>
+
+</scroll-view>

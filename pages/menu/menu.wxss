@@ -1,0 +1,261 @@
+/* menu.wxss */
+/*顶部广告图*/
+.top-img{
+  font-size: 0;
+}
+/*活动提示文本*/
+.tips{
+  background-color: #f5f3f2;
+  border-bottom: 2rpx solid #e1d6cf;
+  font-size: 24rpx;
+  padding: 20rpx;
+}
+.tips-btn{
+  padding: 4rpx 10rpx;
+  background-color: #ac9079;
+  border-radius: 38rpx;
+  color: #fff;
+  margin-right: 20rpx;
+}
+.tips-txt{
+  color: #ac9079;
+}
+/*菜单列表*/
+.menu{
+  position: relative;
+  width:100%;
+  height: 842rpx;
+  display: flex;
+  flex-direction: row;
+}
+/*菜单列表-左侧*/
+.menu-left{
+  width:25%;
+  text-align: center;
+  font-size: 28rpx;
+}
+.menu-left .cate{
+  border-bottom: 2rpx solid #e1d6cf;
+  padding: 20rpx 0;
+  font-weight: bold;
+}
+.menu-left .cate.active{
+  background-color: #fff;
+}
+/*菜单列表-右侧*/
+.menu-right{
+  background-color: #fff;
+  border-left: 2rpx solid #e1d6cf;
+}
+.menu-list{
+  margin:20rpx;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  line-height: 1.8;
+}
+.menu-list-img{
+  width: 30%;
+  font-size: 0;
+  line-height: 0;
+}
+.menu-list-desc{
+  width: 70%;
+  padding-left:20rpx;
+  font-size: 24rpx;
+  color: #818181;
+}
+.menu-list-desc>text{
+  display: block;
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #626262;
+}
+.price{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 28rpx;
+}
+.menu-list-spec{
+  font-size: 32rpx;
+  color: #a28874;
+}
+.price-num>text{
+  font-size: 36rpx;
+  color: #fb584e;
+  padding-right: 10rpx;
+}
+.selectSpec{
+  font-size:24rpx;
+  border-radius:20rpx;
+  background-color:#a28874;
+  padding:6rpx 10rpx;
+  color:#fff;
+}
+/*购物车样式*/
+.shopping-cart{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 7;
+}
+.price-checkout{
+  display: flex;
+  flex-direction: row;
+}
+.shopping-total-price{
+  position: relative;
+  width: 75%;
+  height: 100rpx;
+}
+.total-price{
+  font-size: 48rpx;
+  font-weight: bold;
+  color: #fff;
+  line-height: 100rpx;
+  padding-left: 140rpx;
+}
+.shopping-cart.active .total-price{
+  padding-left: 20rpx;
+}
+.checkout{
+  width: 25%;
+  background-color: #a18773;
+  font-weight: bold;
+  color: #fff;
+  font-size: 44rpx;
+  line-height: 100rpx;
+  text-align: center;
+}
+.goods{
+  position: relative;
+  width: 100%;
+  background-color: #fff;
+}
+/*
+.goods .shadow{
+  background-color: #fff;
+  opacity: 0.95;
+}*/
+.goods-bg{
+  z-index: 6;
+  opacity: 0.5;
+}
+.goods-ctrl{
+  display: none;
+}
+.shopping-cart.active .goods-ctrl{
+  display: block;
+}
+.goods-total{
+  position:absolute;
+  left:20rpx;
+  top:-20rpx;
+  width:100rpx;
+  height:100rpx;
+  background-color:#ac9079;
+  border-radius:100%;
+  text-align: center;
+}
+.shopping-cart.active .goods-total{
+  left:30rpx;
+  top:-122rpx;
+}
+.goods-total span{
+  font-size: 56rpx;
+  color: #fff;
+  line-height:100rpx;
+}
+.goods-total text{
+  position:absolute;
+  right:-10rpx;
+  top:-10rpx;
+  font-size: 28rpx;
+  display: block;
+  width: 40rpx;
+  height: 40rpx;
+  line-height:40rpx;
+  background-color: #fb584e;
+  font-weight: bold;
+  color: #fff;
+  border-radius:100%;
+  overflow: hidden;
+}
+.goods-clear{
+  font-size: 28rpx;
+  text-align: right;
+  padding: 20rpx;
+  background-color: #f4f4f4;
+  position: relative;
+}
+.goods-clear::before{
+  content: "";
+  position: absolute;
+  left: 60rpx;
+  top: -20rpx;
+  width: 0;
+  height: 0;
+  border-left: 20rpx solid transparent;
+  border-right: 20rpx solid transparent;
+  border-bottom: 20rpx solid #f4f4f4;
+}
+.goods-clear span.icon-del{
+  font-size:30rpx;
+  margin-right:10rpx;
+
+}
+.goods-list{
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 28rpx;
+  line-height: 1.5;
+  color: #626262;
+  padding: 0 10rpx;
+  border-bottom: 2rpx solid #dedede;
+}
+.goods-name{
+  flex:6;
+  padding: 10rpx;
+}
+.goods-name text{
+  display: block;
+  font-size: 24rpx;
+  color: #818181;
+}
+.goods-price{
+  flex:2;
+  padding: 10rpx;
+}
+.goods-num{
+  flex:2;
+  padding: 10rpx;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-around;
+}
+.goods-num button{
+  border-radius: 100%;
+  width: 36rpx;
+  height: 36rpx;
+  line-height: 36rpx;
+  padding: 0;
+  font-weight: bold;
+}
+.goods-num .plus button{
+  border:2rpx solid #a18773;
+  background-color: #a18773;
+  color: #fff;
+}
+.goods-num .reduce button{
+  border:2rpx solid #666;
+  color: #666;
+}
+.goods-num input{
+  font-weight: bold;
+  text-align: center;
+}

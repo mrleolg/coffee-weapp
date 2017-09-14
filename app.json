@@ -1,0 +1,44 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/home/home",
+    "pages/menu/menu",
+    "pages/uc/uc",
+    "pages/logs/logs",
+    "pages/order/order"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#f9f9f9",
+    "navigationBarTitleText": "威鲸人文咖啡",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#7e7e7e",
+    "selectedColor": "#8e694c",
+    "backgroundColor": "#ffffff",
+    "position": "bottom",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "icon/home.png",
+        "selectedIconPath": "icon/home-ed.png"
+      },
+      {
+        "pagePath": "pages/menu/menu",
+        "text": "菜单",
+        "iconPath": "icon/coffee.png",
+        "selectedIconPath": "icon/coffee-ed.png"
+      },
+      {
+        "pagePath": "pages/uc/uc",
+        "text": "我的",
+        "iconPath": "icon/uc.png",
+        "selectedIconPath": "icon/uc-ed.png"
+      }
+    ]
+  },
+  "debug": true
+}

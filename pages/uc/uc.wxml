@@ -1,0 +1,43 @@
+<!--uc.wxml-->
+<!--头部背景墙-->
+<view class="headbg">
+  <image class="head-bg" src="../../images/my.jpg" mode="widthFix"></image>
+  <view class="container">
+    <view class="headpor">
+      <image src="{{userInfo.avatarUrl}}" mode="widthFix"></image>
+      <span class="iconfont"></span>
+    </view>
+    <view class="myname">{{userInfo.nickName}}</view>
+    <view class="myfliepro">{{userInfo.country}}.{{userInfo.province}}.{{userInfo.city}}</view>
+  </view>
+</view>
+
+<!--订单管理-->
+<view class="panel myorder">
+  <view class="panel-title">
+    <text class="panel-title-txt">我的订单</text>
+    <navigator url="../order/order" hover-class="navigator-hover">全部订单<span class="panel-title-icon iconfont icon-xiayiye"></span></navigator>
+  </view>
+  <view class="myorder-items">
+    <navigator url="url"><span class="iconfont icon-daifukuan"></span>待付款</navigator>
+    <navigator url="url"><span class="iconfont icon-yiwancheng"></span>已完成</navigator>
+  </view>
+</view>
+
+<!--优惠券-->
+<view class="panel mycoupon">
+  <navigator url="" class="panel-title">
+    <text class="panel-title-txt">优惠券</text>
+    <span class="panel-title-icon mycoupon-num">2</span>
+  </navigator>
+</view>
+
+<!--联系我们-->
+<view class="panel contect">
+  <navigator url="" class="panel-title">
+    <text class="panel-title-txt">联系客服</text>
+  </navigator>
+</view>
+
+<!--技术支持图标-->
+<view class="copyright"><image src="../../images/copyright.png" mode="widthFix"></image></view>

@@ -1,0 +1,13 @@
+<!--index.wxml-->
+<view class="container-fluid">
+  <image src="img/bg.jpg" class="bg"></image>
+  <image src="img/logo.png" class="logo"></image>
+  <view class="indexpage">
+    <view>致力追寻</view>
+    <view>身在台湾风情的感觉</view>
+    <navigator url="../home/home" open-type="switchTab">欢迎光临</navigator>
+  </view>
+</view>
+
+<!--技术支持图标-->
+<view class="copyright"><image src="../../images/copyright.png" mode="widthFix"></image></view>
